@@ -31,7 +31,7 @@ Turns the PS5 Store tile into WK Autoloader: open the tile, start the jailbreak,
 
 ## Requirements
 
-- PS5 firmware 7.00׳³ג€™׳’ג€ֲ¬׳’ג‚¬ֲ13.60 (Relapse).
+- PS5 firmware 7.00–13.60 (Relapse).
 - elfldr listening on port `9021`.
 - A way to send an ELF to elfldr, for example after an earlier jailbreak.
 
@@ -61,8 +61,6 @@ Changes since 1.2.0.
 - Store Restore puts the PlayStation Store tile back and also removes leftover WK Autoloader app folders and cache data (no backups kept).
 - Before upgrading from an older WK Autoloader Store install, run Restore first, reboot, then install 1.2.4.
 
-- After jailbreak, WK Autoloader no longer opens Elf Launcher.
-- Jailbreak still runs; no post-JB ELF send/open.
 ## What's new in 1.2.0
 
 Changes since 1.1.4.
