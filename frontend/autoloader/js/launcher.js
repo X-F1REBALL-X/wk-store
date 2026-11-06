@@ -553,11 +553,8 @@ W.launcher.onAutoloadResult = function (data) {
       W.uiLog('[update] skipping companion open - WK install only', 'info');
       return;
     }
-    W.launcher.openCompanionPage();
-    /* Save CFI after JB when launcher is up - shown from the next splash. */
-    setTimeout(function () {
-      if (W.persistCfiFromLauncher) W.persistCfiFromLauncher(function () {});
-    }, 3500);
+    /* No longer open Elf Launcher (or Payload Manager) after jailbreak. */
+    W.uiLog('Jailbreak done - not opening Elf Launcher.', 'info');
   }, 0);
 };
 

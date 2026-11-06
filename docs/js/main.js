@@ -43,7 +43,8 @@ W.startChain = function (skipElfSend) {
     W.els.detectChip.className = 'chip ok';
   }
 
-  var autoloadName = W.state.forceAutoloadName || (skipElfSend ? 'wkal-skip' : W.autoloadElfName());
+  /* Never autoload / open Elf Launcher after JB. */
+  var autoloadName = W.state.forceAutoloadName || 'wkal-skip';
   var urls = W.buildExploitUrls(autoloadName);
   W.state.UMTX2_URL = '';
   W.state.P2JB_URL = '';

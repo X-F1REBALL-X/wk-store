@@ -66,7 +66,8 @@ W.startChain = function (skipElfSend) {
   }
   /* Where the Elf Launcher that ends up on :1000 comes from (no-downgrade check). */
   W.state.elRunSrc = wantPm ? 'pldmgr' : (W.state.elfHttpAlreadyUp ? 'preexisting' : (W.state.elMirrorFirst ? 'mirror' : 'bundled'));
-  var autoloadName = W.state.forceAutoloadName || (skipElfSend ? 'wkal-skip' : W.autoloadElfName());
+  /* Never autoload / open Elf Launcher after JB. */
+  var autoloadName = W.state.forceAutoloadName || 'wkal-skip';
   var urls = W.buildExploitUrls(autoloadName);
   W.state.UMTX2_URL = urls.umtx2;
   W.state.P2JB_URL = urls.p2jb;
@@ -80,11 +81,7 @@ W.startChain = function (skipElfSend) {
   if (wantPm) {
     W.uiLog('Post-JB launcher: Payload Manager (send ' + autoloadName + ' then open :8084)', 'info');
   } else {
-    W.uiLog('Post-JB launcher: ' + (W.state.elfHttpAlreadyUp
-      ? 'Elf Launcher Hybrid (open :1000 only)'
-      : W.state.elMirrorFirst
-        ? 'Elf Launcher console mirror ' + W.elauto.mirrorLabel() + ' (bundled ' + W.BUNDLED_ELFLAUNCHER_VER + ' = fallback)'
-        : 'Elf Launcher Hybrid (send ' + autoloadName + ' ' + W.BUNDLED_ELFLAUNCHER_VER + ' then open :1000)'), 'info');
+    W.uiLog('Post-JB: no Elf Launcher open (autoload=' + autoloadName + ')', 'info');
   }
   W.uiLog('Chain: ' + picked + ' (autoload=' + autoloadName + ')', 'info');
 
