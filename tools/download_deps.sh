@@ -292,7 +292,7 @@ elflauncher_from_local() {
             mkdir -p "$(dirname "$ELFLAUNCHER_DEST")"
             cp -f "$src" "$ELFLAUNCHER_DEST"
             echo "elf-launcher: local tip $src -> $ELFLAUNCHER_DEST"
-            ELFLAUNCHER_TAG="${ELFLAUNCHER_TAG:-tip}"
+            ELFLAUNCHER_TAG="${ELFLAUNCHER_TAG:-2.0.6}"
             return 0
         fi
     done

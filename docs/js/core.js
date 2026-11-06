@@ -59,8 +59,8 @@ W.LS_RETRY_KEY = 'wkal_safe_retries';
 W.LS_SOUND_KEY = 'wkal_sound';
 W.LS_HISTORY_KEY = 'wkal_jb_history';
 W.CHOICE_ELF_LAUNCHER = 'elf-launcher';
-W.BUNDLED_ELFLAUNCHER_SHA = '1b4494e669ef07525c77036777d36a20f1eb81a708fe8262b26ffffa9452f547';
-W.BUNDLED_ELFLAUNCHER_VER = 'tip';
+W.BUNDLED_ELFLAUNCHER_SHA = '530dd1e02d966f24932a10c96918ed36848718c352dc94f1e497084cf2ff4fde';
+W.BUNDLED_ELFLAUNCHER_VER = '2.0.6';
 W.CONSOLE_MIRROR_URI = 'file:///data/elf-launcher/mirror/elf-launcher.elf';
 W.STALL_MS = 18000;
 
