@@ -79,8 +79,8 @@ W.setLauncherChoice = function (choice) {
   return v;
 };
 
-W.BUNDLED_ELFLAUNCHER_SHA = '8a22d3e44ca26ed266648611b18c43f15821df9f7bedd1d28711a10fec4e99ab';
-W.BUNDLED_ELFLAUNCHER_VER = '2.0.7';
+W.BUNDLED_ELFLAUNCHER_SHA = 'e40396cbcf04138e47e64ca8ca3d1769aef4056f6cbf8fa0a0e09114b60150b9';
+W.BUNDLED_ELFLAUNCHER_VER = '2.0.15';
 W.CONSOLE_MIRROR_URI = 'file:///data/elf-launcher/mirror/elf-launcher.elf';
 W.STALL_MS = 18000;
 
