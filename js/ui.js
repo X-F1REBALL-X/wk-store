@@ -539,7 +539,7 @@ W.ui.bindHome = function () {
       var pctEl = document.getElementById('cacheFillPct');
       var barEl = document.getElementById('cacheFillBar');
       var subEl = document.getElementById('cacheFillSub');
-      if (box) box.hidden = !on;
+      if (box) box.hidden = true; /* never show Preparing modal */
       if (on) {
         if (pctEl && !pctEl.textContent) pctEl.textContent = '...';
         if (subEl) subEl.textContent = detail || 'Waiting for cache before jailbreak...';
