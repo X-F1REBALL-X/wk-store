@@ -285,7 +285,7 @@ window.addEventListener('load', function () {
       pctEl.textContent = p + '%';
       barEl.style.width = p + '%';
       if (sub && subEl) subEl.textContent = sub;
-      box.hidden = false;
+      box.hidden = true /* no modal */;
     }
     function hide() { box.hidden = true; }
     function onProgress(e) {
