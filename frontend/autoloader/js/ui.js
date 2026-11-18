@@ -539,7 +539,7 @@ W.ui.bindHome = function () {
       var pctEl = document.getElementById('cacheFillPct');
       var barEl = document.getElementById('cacheFillBar');
       var subEl = document.getElementById('cacheFillSub');
-      if (box) box.hidden = !on;
+      if (box) box.hidden = true; /* never show Preparing modal */
       if (on) {
         if (pctEl && !pctEl.textContent) pctEl.textContent = '...';
         if (subEl) subEl.textContent = detail || 'Waiting for cache before jailbreak...';
@@ -559,6 +559,11 @@ W.ui.bindHome = function () {
   function whenAppCacheReady(done) {
     var ac = null;
     try { ac = (typeof applicationCache !== 'undefined') ? applicationCache : null; } catch (e0) { ac = null; }
+    /* No html manifest (GitHub Pages host): start immediately. */
+    try {
+      var man = document.documentElement && document.documentElement.getAttribute('manifest');
+      if (!man) { setCacheWaitUi(false); done(); return; }
+    } catch (eMan) {}
     /* No AppCache API (PC preview): allow start. */
     if (!ac) { done(); return; }
     var st = -1;
